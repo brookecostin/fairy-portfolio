@@ -756,6 +756,22 @@ overflow-y: auto;
 }
 
 @media (max-width: 700px) {
+.mobile-entrance-background {
+  display: block;
+
+  position: fixed;
+
+  top: -5vh;
+  left: -5vw;
+
+  width: 110vw;
+  height: 110dvh;
+
+  object-fit: cover;
+  object-position: center;
+
+  z-index: -1;
+}
 
 /* mobile entrance background */
 
@@ -771,6 +787,8 @@ overflow-y: auto;
   height: 100dvh;
 
   overflow: hidden;
+
+  background: transparent;
 }
 
 .entrance-background {
