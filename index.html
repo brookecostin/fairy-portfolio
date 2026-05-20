@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Character settings -->
+  <meta charset="UTF-8" />
+
+  <!-- Makes website responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Browser tab title -->
+  <title>Brooke Costin Portfolio</title>
+
+  <!-- Connect CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+<!-- =========================================
+     ENTRANCE PAGE
+========================================= -->
+
+<div class="entrance-page" id="entrancePage">
+
+  <!-- Entrance background image -->
+  <img
+    src="Images/entrance-background.png"
+    class="entrance-background"
+  />
+
+  <!-- Flying fairy -->
+  <img
+    src="Images/fairy.png"
+    class="entrance-fairy"
+    id="entranceFairy"
+  />
+
+  <!-- Intro locket card -->
+  <div class="intro-card">
+
+    <!-- Your profile image -->
+    <img
+      src="Images/me.jpg"
+      class="profile-image"
+    />
+
+    <!-- Intro text -->
+    <div class="intro-text">
+
+      <!-- Name -->
+      <h1>Brooke Costin</h1>
+
+      <!-- Main description -->
+      <p>
+        Biomedical engineer, designer,
+        and creator inspired by
+        whimsical worlds, CAD,
+        and interactive experiences.
+      </p>
+
+      <!-- Artwork disclaimer -->
+      <p class="art-note">
+        P.S All illustrations displayed
+        are hand drawn and created by me
+      </p>
+
+       <!-- LinkedIn icon -->
+  <a
+    href="https://www.linkedin.com/in/brookecostin/"
+    target="_blank"
+    class="linkedin-link"
+  >
+
+    <img
+      src="Images/linkedin.png"
+      class="linkedin-icon"
+    />
+
+  </a>
+
+      </span>
+
+    </div>
+
+  </div>
+
+  <!-- Magical sparkles -->
+  <div class="sparkles" id="sparkles">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </div>
+
+  <!-- Portal glow -->
+  <div class="portal-glow"></div>
+
+</div>
+
+<!-- =========================================
+     FAIRY VILLAGE PAGE
+========================================= -->
+
+<div class="garden-wrapper hidden" id="villagePage">
+
+  <main class="garden">
+
+    <!-- Main background -->
+    <img
+      src="Images/background.png"
+      class="background"
+    />
+
+    <!-- Resume house -->
+    <a class="house resume" href="resume.pdf">
+      <img src="Images/resume.png" />
+    </a>
+
+    <!-- About house -->
+    <a
+      class="house about"
+      href="#"
+      id="aboutHouse"
+    >
+      <img src="Images/about.png" />
+    </a>
+
+    <!-- Skills house -->
+<a
+  class="house skills"
+  href="#"
+  id="skillsHouse"
+>
+  <img src="Images/skills.png" />
+</a> 
+
+    <!-- Projects house -->
+    <a class="house projects" href="#projects">
+      <img src="Images/projects.png" />
+    </a>
+
+    <!-- Experience house -->
+    <a class="house experience" href="#experience">
+      <img src="Images/experience.png" />
+    </a>
+
+    <!-- Floating fairy -->
+    <img
+      src="Images/fairy.png"
+      class="fairy"
+    />
+
+  </main>
+
+</div>
+
+<!-- =========================================
+     ABOUT POPUP
+========================================= -->
+
+<div class="popup hidden" id="aboutPopup">
+
+  <!-- Popup box -->
+  <div class="popup-box">
+
+    <!-- Close button -->
+    <button
+      class="close-button"
+      id="closeAbout"
+    >
+      ×
+    </button>
+
+    <!-- Popup title -->
+    <h2>About Me</h2>
+
+    <!-- Popup text -->
+    <p>
+      Hi, I’m Brooke Costin, a Biomedical Engineering graduate from the University of Rhode Island with a passion for CAD, design, and interactive engineering projects. Through experience in biomedical instrumentation, wearable sensor design, and lab work, I’ve developed strong skills in problem-solving, collaboration, and technical design.
+    </p>
+
+    <!-- LinkedIn icon -->
+<a
+  href="https://www.linkedin.com/in/brookecostin/"
+  target="_blank"
+  class="linkedin-popup-link"
+>
+
+  <img
+    src="Images/linkedin.png"
+    class="linkedin-popup-icon"
+  />
+
+</a>
+
+  </div>
+
+</div>
+
+<!-- =========================================
+     SKILLS POPUP
+========================================= -->
+
+<div class="popup hidden" id="skillsPopup">
+
+  <!-- Popup box -->
+  <div class="popup-box skills-box">
+
+    <!-- Close button -->
+    <button
+      class="close-button"
+      id="closeSkills"
+    >
+      ×
+    </button>
+
+    <!-- Popup title -->
+    <h2>Skills</h2>
+
+    <!-- Skill categories -->
+    <div class="skills-grid">
+
+      <!-- CAD section -->
+      <div class="skill-section">
+
+        <h3>Design & CAD</h3>
+
+        <div class="skill-tags">
+          <span>SolidWorks</span>
+          <span>Fusion 360</span>
+          <span>Shapr3D</span>
+          <span>3D Printing</span>
+          <span>Conductive Filament Printing</span>
+        </div>
+
+      </div>
+
+      <!-- Programming section -->
+      <div class="skill-section">
+
+        <h3>Programming</h3>
+
+        <div class="skill-tags">
+          <span>MATLAB</span>
+          <span>Python</span>
+          <span>C++</span>
+          <span>Arduino</span>
+          <span>HTML & CSS</span>
+        </div>
+
+      </div>
+
+      <!-- Engineering section -->
+      <div class="skill-section">
+
+        <h3>Engineering and Lab</h3>
+
+        <div class="skill-tags">
+          <span>Multisim</span>
+          <span>Osciliscope</span>
+          <span>Soldering</span>
+          <span>Lab Testing</span>
+          <span>Wearable Sensors</span>
+          <span>Blood Born Pathogens </span>
+          <span>Microscopy</span>
+          <span>Disections</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Connect JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
