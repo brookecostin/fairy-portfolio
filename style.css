@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
 overflow-x: hidden;
-overflow-y: hidden;
+overflow-y: auto;
 
   background: #e7c0a8;
 
@@ -771,8 +771,10 @@ overflow-y: hidden;
   top: 0;
   left: 0;
 
-  width: 100vw;
-  height: 100dvh;
+  width: auto;
+  height: 100svh;
+
+  min-width: 100vw;
 
   object-fit: cover;
 
