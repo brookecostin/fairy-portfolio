@@ -744,55 +744,6 @@ overflow-y: hidden;
 }
 
 /* =========================================
-   MOBIL VERSION
-========================================= */
-
-@media (max-width: 700px) {
-  .entrance-background {
-    object-fit: contain;
-    object-position: center;
-    background: #e7c0a8;
-  }
-
-  .intro-card {
-    left: 50%;
-    top: 50%;
-
-    width: 220px;
-    height: 335px;
-
-    padding: 20px;
-  }
-
-  .profile-image {
-    width: 115px;
-    height: 115px;
-  }
-
-  .intro-text h1 {
-    font-size: 24px;
-  }
-
-  .intro-text p {
-    font-size: 11px;
-    max-width: 170px;
-  }
-
-  .intro-text .art-note {
-    font-size: 9px;
-  }
-
-  .linkedin-icon {
-    width: 28px;
-  }
-
-  .entrance-fairy {
-    left: 5%;
-    top: 72%;
-    width: 24%;
-  }
-}
-/* =========================================
    MOBILE VERSION
 ========================================= */
 
@@ -886,32 +837,56 @@ overflow-y: hidden;
   /* swipe hint */
 
   .mobile-scroll-hint {
-    display: block;
+  display: block;
 
-    position: fixed;
+  position: fixed;
 
-    bottom: 20px;
-    left: 50%;
+  bottom: 110px;
 
-    transform: translateX(-50%);
+  left: 50%;
 
-    z-index: 99999;
+  transform: translateX(-50%);
 
-    color: #ffeda6;
+  z-index: 999999;
 
-    font-size: 14px;
+  color: #ffeda6;
 
-    background: rgba(20, 20, 30, 0.45);
+  font-size: 15px;
 
-    backdrop-filter: blur(6px);
+  letter-spacing: 1px;
 
-    border: 1px solid rgba(255, 240, 210, 0.35);
+  background: rgba(20, 20, 30, 0.72);
 
-    border-radius: 999px;
+  backdrop-filter: blur(10px);
 
-    padding: 8px 14px;
+  border: 1px solid rgba(255, 240, 210, 0.45);
 
-    box-shadow:
-      0 0 15px rgba(255, 225, 170, 0.25);
+  border-radius: 999px;
+
+  padding: 10px 16px;
+
+  box-shadow:
+    0 0 18px rgba(255, 225, 170, 0.35);
+
+  animation: swipeGlow 2s ease-in-out infinite;
+}
+
+@keyframes swipeGlow {
+
+  0% {
+    opacity: 0.7;
+    transform: translateX(-50%) translateY(0px);
   }
+
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-4px);
+  }
+
+  100% {
+    opacity: 0.7;
+    transform: translateX(-50%) translateY(0px);
+  }
+}
+
 }
