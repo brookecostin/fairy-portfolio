@@ -24,7 +24,7 @@ overflow-y: hidden;
 
 .entrance-page {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
 
   position: relative;
 
@@ -767,12 +767,16 @@ overflow-y: hidden;
   display: block;
 
   position: absolute;
-  inset: 0;
 
-  width: 100%;
-  height: 100%;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100dvh;
 
   object-fit: cover;
+
+  object-position: center;
 }
 
   .intro-card {
