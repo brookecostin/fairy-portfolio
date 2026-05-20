@@ -49,6 +49,10 @@ overflow-y: hidden;
   display: block;
 }
 
+.mobile-entrance-background {
+  display: none;
+}
+
 /* =========================
    INTRO CARD
 ========================= */
@@ -753,13 +757,23 @@ overflow-y: hidden;
 
 @media (max-width: 700px) {
 
-  /* entrance page */
+/* mobile entrance background */
 
-  .entrance-background {
-    object-fit: contain;
-    object-position: center;
-    background: #e7c0a8;
-  }
+.entrance-background {
+  display: none;
+}
+
+.mobile-entrance-background {
+  display: block;
+
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
 
   .intro-card {
     left: 50%;
