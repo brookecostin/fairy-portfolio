@@ -769,7 +769,7 @@ overflow-y: auto;
     z-index: -1;
   }
     body {
-    background: #0a0a14;
+    background: url('Images/mobile-entrance-background.png') center center / cover fixed no-repeat;
     }
 
 /* mobile entrance background */
