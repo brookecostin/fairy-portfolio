@@ -25,23 +25,23 @@ body {
   width: 100vw;
   height: 100vh;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   position: relative;
 
   overflow: hidden;
+
+  cursor: pointer;
 
   background: #e7c0a8;
 }
 
 .entrance-background {
+   
   position: absolute;
 
-  width: max(100vw, calc(100vh * 1.5));
+  inset: 0;
 
-  aspect-ratio: 1536 / 1024;
+  width: 100%;
+  height: 100%;
 
   object-fit: cover;
 
@@ -740,4 +740,54 @@ body {
   transform: scale(1.15);
 
   opacity: 1;
+}
+
+/* =========================================
+   MOBIL VERSION
+========================================= */
+
+@media (max-width: 700px) {
+  .entrance-background {
+    object-fit: contain;
+    object-position: center;
+    background: #e7c0a8;
+  }
+
+  .intro-card {
+    left: 50%;
+    top: 50%;
+
+    width: 220px;
+    height: 335px;
+
+    padding: 20px;
+  }
+
+  .profile-image {
+    width: 115px;
+    height: 115px;
+  }
+
+  .intro-text h1 {
+    font-size: 24px;
+  }
+
+  .intro-text p {
+    font-size: 11px;
+    max-width: 170px;
+  }
+
+  .intro-text .art-note {
+    font-size: 9px;
+  }
+
+  .linkedin-icon {
+    width: 28px;
+  }
+
+  .entrance-fairy {
+    left: 5%;
+    top: 72%;
+    width: 24%;
+  }
 }
