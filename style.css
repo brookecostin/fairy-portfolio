@@ -770,8 +770,9 @@ overflow-y: auto;
   }
     body {
     background: url('Images/mobile-entrance-background.png') center center / cover fixed no-repeat;
+     background-color: #040d09;
     }
-
+  
 /* mobile entrance background */
 
 .entrance-background {
