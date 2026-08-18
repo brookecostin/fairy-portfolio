@@ -14,6 +14,13 @@
   <!-- Connect CSS -->
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Lets the website display interactive 3D GLB models -->
+
+<script
+  type="module"
+  src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
+</script>
+
 </head>
 
 <body>
@@ -87,8 +94,6 @@
 
   </a>
 
-      </span>
-
     </div>
 
   </div>
@@ -129,9 +134,13 @@
     />
 
     <!-- Resume house -->
-    <a class="house resume" href="resume.pdf">
-      <img src="Images/resume.png" />
-    </a>
+<a
+  class="house resume"
+  href="Documents/resume.pdf"
+  target="_blank"
+>
+  <img src="Images/resume.png" />
+</a>
 
     <!-- About house -->
     <a
@@ -152,9 +161,13 @@
 </a> 
 
     <!-- Projects house -->
-    <a class="house projects" href="#projects">
-      <img src="Images/projects.png" />
-    </a>
+<a
+  class="house projects"
+  href="#"
+  id="projectsHouse"
+>
+  <img src="Images/projects.png" />
+</a>
 
     <!-- Experience house -->
     <a class="house experience" href="#experience">
@@ -203,7 +216,7 @@
 
     <!-- LinkedIn icon -->
 <a
-  href=""
+  href="https://www.linkedin.com/in/brookecostin/"
   target="_blank"
   class="linkedin-popup-link"
 >
@@ -214,6 +227,194 @@
   />
 
 </a>
+
+  </div>
+
+</div>
+ 
+<!-- =========================================
+     PROJECTS BOOK POPUP
+========================================= -->
+
+<div id="projectsPopup" class="hidden">
+
+  <div class="book-wrapper">
+
+    <button
+  class="close-button"
+  id="closeProjects"
+>
+  ×
+</button>
+
+    <img
+      src="Images/book.png"
+      alt="Project Book"
+      class="project-book"
+    >
+     <button
+    class="project-tab"
+    id="insoleTab"
+  >
+    3D- Printed Gait Insole
+  </button>
+
+  <button
+    class="project-tab"
+    id="pillTab"
+  >
+    Pillz Dispenser
+  </button>
+
+  <button
+    class="project-tab"
+    id="websiteTab"
+  >
+    Portfolio Website
+  </button>
+
+  </div>
+
+</div>
+
+<!-- =========================================
+     PROJECT INSOLE DETAIL PAGE
+========================================= -->
+<div
+  id="projectDetailPopup"
+  class="popup hidden"
+>
+
+  <!-- Project Insole page container -->
+  <div
+    class="project-detail-page"
+    id="projectDetailPage"
+  >
+
+    <!-- Close from insole project page -->
+    <button
+      class="close-button"
+      id="closeProjectDetail"
+    >
+      ×
+    </button>
+
+    <!-- Back from insole to project book -->
+    <button
+      class="project-back-button"
+      id="backToProjects"
+    >
+      ← Back to Book
+    </button>
+
+    <!-- Project cover image -->
+    <img
+      src="Images/insole-cover.jpg"
+      class="project-cover"
+      id="projectCover"
+    >
+
+    <!-- Project title -->
+    <h2 id="projectTitle">
+      3D-Printed Gait Insole
+    </h2>
+
+    <!-- Project Insole description -->
+    <p id="projectDescription">
+      This project focused on designing and prototyping
+      a 3D-printed capacitive sensing insole for gait
+      analysis and pressure monitoring.
+    </p>
+
+    <!-- Project Insole action buttons -->
+    <div class="project-action-buttons">
+
+      <!-- Documentation button -->
+      <a
+        href="Documents/insole-finalreport.pdf"
+        target="_blank"
+        class="project-action-button"
+        id="documentationButton"
+      >
+        View Documentation
+      </a>
+
+      <!-- 360 model button -->
+      <button
+        class="project-action-button"
+        id="viewModelButton"
+      >
+        Take a 360° Look
+      </button>
+
+    </div>
+  
+    <!-- =========================================
+         INTERACTIVE INSOLE 3D MODEL AREA
+    ========================================= -->
+
+    <div
+      class="model-section hidden"
+      id="modelSection"
+    >
+
+      <h3>
+        Take a 360° Look
+      </h3>
+
+      <p class="model-instructions">
+        Drag to rotate • Scroll or pinch to zoom
+      </p>
+
+      <!-- Model selector buttons -->
+<div class="model-buttons">
+
+  <!-- Full insole -->
+  <button
+    class="model-choice"
+    data-model="Models/InsoleV5.glb"
+  >
+    Full Insole
+  </button>
+
+  <!-- Heel section -->
+  <button
+    class="model-choice"
+    data-model="Models/InsoleV5-heel.glb"
+  >
+    Heel
+  </button>
+
+  <!-- Serpentine sensor -->
+  <button
+    class="model-choice"
+    data-model="Models/serpentine.glb"
+  >
+    Sensor
+  </button>
+
+  <!-- Electronics enclosure -->
+  <button
+    class="model-choice"
+    data-model="Models/final-enclosure.glb"
+  >
+    Enclosure
+  </button>
+
+</div>
+
+
+      <!-- Interactive GLB viewer -->
+      <model-viewer
+        id="cadViewer"
+        src="Models/InsoleV5.glb"
+        camera-controls
+        touch-action="pan-y"
+        shadow-intensity="1"
+        alt="Interactive 3D CAD model">
+      </model-viewer>
+
+    </div>
 
   </div>
 

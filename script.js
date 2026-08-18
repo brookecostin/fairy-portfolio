@@ -128,3 +128,343 @@ skillsHouse.addEventListener("click", (event) => {
 closeSkills.addEventListener("click", () => {
   skillsPopup.classList.add("hidden");
 });
+
+// =========================================
+// PROJECTS HOUSE POPUP
+// =========================================
+
+const projectsHouse =
+  document.getElementById("projectsHouse");
+
+const projectsPopup =
+  document.getElementById("projectsPopup");
+
+projectsHouse.addEventListener(
+  "click",
+  (event) => {
+
+    event.preventDefault();
+
+    projectsPopup.classList.remove("hidden");
+
+  }
+);
+// Close projects popup button
+const closeProjects =
+  document.getElementById("closeProjects");
+
+// Closes project popup
+closeProjects.addEventListener(
+  "click",
+  () => {
+
+    projectsPopup.classList.add("hidden");
+
+  }
+);
+// =========================================
+// PROJECT DETAIL ELEMENTS
+// =========================================
+
+// Pressure insole book button
+const insoleTab =
+  document.getElementById("insoleTab");
+
+// Pill dispenser book button
+const pillTab =
+  document.getElementById("pillTab");
+
+// Portfolio website book button
+const websiteTab =
+  document.getElementById("websiteTab");
+
+// Project detail popup
+const projectDetailPopup =
+  document.getElementById("projectDetailPopup");
+
+// Project detail page
+const projectDetailPage =
+  document.getElementById("projectDetailPage");
+
+// Project title
+const projectTitle =
+  document.getElementById("projectTitle");
+
+// Project description
+const projectDescription =
+  document.getElementById("projectDescription");
+
+// Project cover image
+const projectCover =
+  document.getElementById("projectCover");
+
+// Documentation button
+const documentationButton =
+  document.getElementById("documentationButton");
+
+// 360 model button
+const viewModelButton =
+  document.getElementById("viewModelButton");
+
+// 3D model section
+const modelSection =
+  document.getElementById("modelSection");
+
+// Interactive model viewer
+const cadViewer =
+  document.getElementById("cadViewer");
+
+// Back to project book button
+const backToProjects =
+  document.getElementById("backToProjects");
+
+// Close project detail button
+const closeProjectDetail =
+  document.getElementById("closeProjectDetail");
+
+
+// =========================================
+// PROJECT INFORMATION
+// =========================================
+
+// Stores the information for each project
+const projectData = {
+
+  insole: {
+
+    title: "3D-Printed Gait Insole",
+
+    description:
+      "A 3D-printed capacitive sensing insole developed for gait analysis and plantar pressure monitoring. The project included CAD design, sensor prototyping, multi-material 3D printing, hardware integration, and human testing.",
+
+    cover:
+      "Images/insole-cover.jpg",
+
+    documentation:
+      "Documents/insole-finalreport.pdf",
+
+    model:
+      "Models/InsoleV5.glb"
+  },
+
+
+  pill: {
+
+    title: "Pillz Dispenser",
+
+    description:
+      "An engineering design project focused on developing a functional pill dispensing system using CAD, prototyping, and user-centered design.",
+
+    cover:
+      "Images/pill-cover.jpg",
+
+    documentation:
+      "Documents/pill-documentation.pdf",
+
+    model:
+      "Models/pill-dispenser.glb"
+  },
+
+
+  website: {
+
+    title: "Interactive Portfolio Website",
+
+    description:
+      "A hand-drawn interactive portfolio designed and coded using HTML, CSS, and JavaScript. The site combines original digital artwork with responsive web design and interactive elements.",
+
+    cover:
+      "Images/website-cover.jpg",
+
+    documentation:
+      "Documents/website-documentation.pdf",
+
+    model:
+      ""
+  }
+
+};
+
+
+// =========================================
+// OPEN PROJECT FUNCTION
+// =========================================
+
+// Opens the selected project
+function openProject(projectName) {
+
+  // Gets information for selected project
+  const project =
+    projectData[projectName];
+
+  // Updates title
+  projectTitle.textContent =
+    project.title;
+
+  // Updates description
+  projectDescription.textContent =
+    project.description;
+
+  // Updates cover image
+  projectCover.src =
+    project.cover;
+
+  // Updates documentation link
+  documentationButton.href =
+    project.documentation;
+
+  // Updates 3D model
+  cadViewer.src =
+    project.model;
+
+  // Hides the model section until user clicks
+  modelSection.classList.add("hidden");
+
+  // Hides project book
+  projectsPopup.classList.add("hidden");
+
+  // Shows project detail popup
+  projectDetailPopup.classList.remove(
+    "hidden"
+  );
+
+  // Restarts page turn animation
+  projectDetailPage.classList.remove(
+    "page-turn"
+  );
+
+  void projectDetailPage.offsetWidth;
+
+  projectDetailPage.classList.add(
+    "page-turn"
+  );
+}
+
+
+// =========================================
+// PROJECT BOOK BUTTONS
+// =========================================
+
+// Opens insole project
+insoleTab.addEventListener(
+  "click",
+  () => {
+
+    openProject("insole");
+
+  }
+);
+
+
+// Opens pill dispenser project
+pillTab.addEventListener(
+  "click",
+  () => {
+
+    openProject("pill");
+
+  }
+);
+
+
+// Opens website project
+websiteTab.addEventListener(
+  "click",
+  () => {
+
+    openProject("website");
+
+  }
+);
+
+
+// =========================================
+// SHOW 360 MODEL
+// =========================================
+
+// Shows interactive model section
+viewModelButton.addEventListener(
+  "click",
+  () => {
+
+    // Reveals the hidden 3D model section
+    modelSection.classList.remove("hidden");
+
+    // Waits until the section has been added
+    // to the page layout
+    setTimeout(() => {
+
+      // Scrolls directly to the CAD viewer
+      modelSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+    }, 250);
+
+  }
+);
+
+// =========================================
+// CHANGE BETWEEN CAD MODELS
+// =========================================
+
+// Finds every model selector button
+document
+  .querySelectorAll(".model-choice")
+  .forEach((button) => {
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        // Gets model path from button
+        const modelPath =
+          button.dataset.model;
+
+        // Loads selected model
+        cadViewer.src =
+          modelPath;
+
+      }
+    );
+
+  });
+
+
+// =========================================
+// BACK TO PROJECT BOOK
+// =========================================
+
+backToProjects.addEventListener(
+  "click",
+  () => {
+
+    // Hides project detail
+    projectDetailPopup.classList.add(
+      "hidden"
+    );
+
+    // Shows project book again
+    projectsPopup.classList.remove(
+      "hidden"
+    );
+
+  }
+);
+
+
+// =========================================
+// CLOSE PROJECT DETAIL
+// =========================================
+
+closeProjectDetail.addEventListener(
+  "click",
+  () => {
+
+    projectDetailPopup.classList.add(
+      "hidden"
+    );
+
+  }
+);
