@@ -297,6 +297,24 @@ function openProject(projectName) {
   const project =
     projectData[projectName];
 
+  // =========================================
+  // PROJECT-SPECIFIC STYLING CLASS
+  // =========================================
+
+  // Removes the class from whichever project
+  // was previously open
+  projectDetailPage.classList.remove(
+    "insole-project",
+    "pill-project",
+    "website-project"
+  );
+
+  // Adds a unique class for the project
+  // that was just clicked
+  projectDetailPage.classList.add(
+    projectName + "-project"
+  );
+
   // Updates title
   projectTitle.textContent =
     project.title;
