@@ -1140,6 +1140,20 @@ overflow-y: auto;
   }
 
 }
+
+/* =========================================
+   PILLZ 3D MODEL SECTION
+========================================= */
+
+/* Pillz only has one model, so hide selector buttons */
+.pill-project .model-buttons {
+  display: none;
+}
+
+/* Remove the space that the buttons normally use */
+.pill-project #cadViewer {
+  margin-top: -80px;
+}
 /*=========================================
    LINKEDIN ICONS
 ========================================= */

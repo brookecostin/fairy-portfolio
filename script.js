@@ -243,6 +243,9 @@ const projectData = {
     documentation:
       "Documents/insole-finalreport.pdf",
 
+    documentationLabel:
+    "View Documentation",
+
     model:
       "Models/InsoleV5.glb"
   },
@@ -253,16 +256,20 @@ const projectData = {
     title: "Pillz Dispenser",
 
     description:
-      "An engineering design project focused on developing a functional pill dispensing system using CAD, prototyping, and user-centered design.",
+      "An engineering design project focused on developing a functional pill dispensing system using CAD, prototyping, and user-centered design. For a fun innovative appround to daily medication.",
 
     cover:
-      "Images/pill-cover.jpg",
+      "Images/pillz-cover.jpg",
 
     documentation:
-      "Documents/pill-documentation.pdf",
+      "Documents/blueprint.jpg",
+
+    // Changes the first button wording for Pillz only
+    documentationLabel:
+      "View Blueprint",
 
     model:
-      "Models/pill-dispenser.glb"
+      "Models/pillz.glb"
   },
 
 
@@ -279,13 +286,14 @@ const projectData = {
     documentation:
       "Documents/website-documentation.pdf",
 
+    documentationLabel:
+      "View Documentation",
+
     model:
       ""
   }
 
 };
-
-
 // =========================================
 // OPEN PROJECT FUNCTION
 // =========================================
@@ -330,6 +338,10 @@ function openProject(projectName) {
   // Updates documentation link
   documentationButton.href =
     project.documentation;
+
+  // Updates the documentation button wording
+  documentationButton.textContent =
+    project.documentationLabel;
 
   // Updates 3D model
   cadViewer.src =
