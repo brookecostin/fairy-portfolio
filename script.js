@@ -222,9 +222,28 @@ const backToProjects =
 const closeProjectDetail =
   document.getElementById("closeProjectDetail");
 
+// =========================================
+// WEBSITE PROJECT ELEMENTS
+// =========================================
+
+// Website-only button container
+const websiteActionButtons =
+  document.getElementById("websiteActionButtons");
+
+// Design & Development button
+const designDevelopmentButton =
+  document.getElementById("designDevelopmentButton");
+
+// Key Features button
+const keyFeaturesButton =
+  document.getElementById("keyFeaturesButton");
+
+// Website information box
+const websiteInfo =
+  document.getElementById("websiteInfo");
 
 // =========================================
-// PROJECT INFORMATION
+// PROJECT SECTION INFORMATION
 // =========================================
 
 // Stores the information for each project
@@ -275,28 +294,21 @@ const projectData = {
 
   website: {
 
-    title: "Interactive Portfolio Website",
+  title: "Interactive Portfolio Website",
 
-    description:
-      "A hand-drawn interactive portfolio designed and coded using HTML, CSS, and JavaScript. The site combines original digital artwork with responsive web design and interactive elements.",
+  description:
+    "A hand-drawn interactive portfolio designed and coded using HTML, CSS, and JavaScript. The site combines original digital artwork with responsive web design and interactive elements.",
 
-    cover:
-      "Images/website-cover.jpg",
+  cover: "",
+  documentation: "",
+  documentationLabel: "",
+  model: ""
+}
+  };
 
-    documentation:
-      "Documents/website-documentation.pdf",
-
-    documentationLabel:
-      "View Documentation",
-
-    model:
-      ""
-  }
-
-};
-// =========================================
-// OPEN PROJECT FUNCTION
-// =========================================
+ // =========================================
+ // OPEN PROJECT FUNCTION
+ // =========================================
 
 // Opens the selected project
 function openProject(projectName) {
@@ -322,6 +334,45 @@ function openProject(projectName) {
   projectDetailPage.classList.add(
     projectName + "-project"
   );
+
+  // =========================================
+  // WEBSITE PROJECT SPECIAL LAYOUT
+  // =========================================
+
+if (projectName === "website") {
+
+  // Hide things Website does not need
+  projectCover.classList.add("hidden");
+
+  documentationButton.classList.add("hidden");
+
+  viewModelButton.classList.add("hidden");
+
+  modelSection.classList.add("hidden");
+
+
+  // Show Website-specific buttons
+  websiteActionButtons.classList.remove("hidden");
+
+  // Start with information box hidden
+  websiteInfo.classList.add("hidden");
+
+} else {
+
+  // Show normal project content for Insole and Pillz
+  projectCover.classList.remove("hidden");
+
+  documentationButton.classList.remove("hidden");
+
+  viewModelButton.classList.remove("hidden");
+
+
+  // Hide Website-specific content
+  websiteActionButtons.classList.add("hidden");
+
+  websiteInfo.classList.add("hidden");
+}
+  
 
   // Updates title
   projectTitle.textContent =
@@ -369,6 +420,56 @@ function openProject(projectName) {
     "page-turn"
   );
 }
+// =========================================
+// WEBSITE PROJECT INFORMATION BUTTONS
+// =========================================
+
+
+// Design & Development
+designDevelopmentButton.addEventListener(
+  "click",
+  () => {
+
+    websiteInfo.innerHTML = `
+      <h3>Design & Development</h3>
+
+      <p>
+        Designed and developed from scratch using HTML,
+        CSS, and JavaScript. The portfolio combines
+        original hand-drawn artwork with responsive
+        layouts, custom animations, interactive
+        navigation, and project-specific experiences.
+      </p>
+    `;
+
+    websiteInfo.classList.remove("hidden");
+
+  }
+);
+
+
+// Key Features
+keyFeaturesButton.addEventListener(
+  "click",
+  () => {
+
+    websiteInfo.innerHTML = `
+      <h3>Key Features</h3>
+
+      <div class="website-feature-list">
+        <p>✦ Original hand-drawn digital artwork</p>
+        <p>✦ Responsive desktop and mobile design</p>
+        <p>✦ Interactive fairy-village navigation</p>
+        <p>✦ Animated project book and page transitions</p>
+        <p>✦ Interactive 3D CAD model integration</p>
+        <p>✦ Custom HTML, CSS, and JavaScript</p>
+      </div>
+    `;
+
+    websiteInfo.classList.remove("hidden");
+
+  }
+);
 
 
 // =========================================
