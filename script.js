@@ -275,7 +275,7 @@ const projectData = {
     title: "Pillz Dispenser",
 
     description:
-      "An engineering design project focused on developing a functional pill dispensing system using CAD, prototyping, and user-centered design. For a fun innovative appround to daily medication.",
+      "An engineering design project focused on developing a functional pill dispensing system using CAD, prototyping, and user-centered design. For a fun innovative approach to daily medication.",
 
     cover:
       "Images/pillz-cover.jpg",
