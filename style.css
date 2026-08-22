@@ -1054,7 +1054,7 @@ overflow-y: auto;
   opacity: 0.75;
   margin-top: 0;
   position: relative;
-  top: -70px; 
+  top: -95px; 
 
   font-size: 12px;
 }
@@ -1098,7 +1098,14 @@ overflow-y: auto;
 
   cursor: pointer;
 }
+/* =========================================
+   PILLZ — HIDE MODEL BUTTONS
+   Desktop + Mobile
+========================================= */
 
+.pill-project .model-buttons {
+  display: none !important;
+}
 /* =========================================
    INSOLE INTERACTIVE CAD VIEWER
 ========================================= */
