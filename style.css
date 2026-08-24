@@ -437,9 +437,9 @@ overflow-y: auto;
 ========================= */
 
 .resume {
-  left: 4%;
-  top: 7.8%;
-  width: 22%;
+  left: 3.5%;
+  top: 2.5%;
+  width: 23%;
 }
 
 .about {
@@ -493,6 +493,111 @@ overflow-y: auto;
     transform: translateY(0px);
   }
 }
+/* =========================================
+   FLYING GNOME
+========================================= */
+
+.flying-gnome {
+  position: absolute;
+
+  /* GNOME POSITION */
+  left: 65%;
+  top: 8%;
+
+  /* scales with the garden */
+  width: 18%;
+
+  padding: 0;
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  animation: gnomeFloat 3.5s ease-in-out infinite;
+}
+
+.flying-gnome img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* gnome thought bubble */
+.gnome-bubble {
+  position: absolute;
+
+  /* BUBBLE POSITION */
+  left: 55%;
+  top: 12%;
+
+  /* scales with the garden */
+  width: 13%;
+
+  padding: 1.5% 2%;
+
+  background: #fbe8ba;
+
+  color: #4a3200;
+
+  font-family: "Apple Chancery", "URW Chancery L", cursive;
+
+  /* text scales with screen */
+  font-size: 17px;
+
+  font-weight: bold;
+
+  line-height: 1.15;
+
+  text-align: center;
+
+  /* clean oval */
+  border-radius: 50%;
+
+  box-shadow:
+    0 4px 15px rgba(90, 50, 25, 0.15),
+    0 0 18px rgba(255, 240, 210, 0.35);
+
+  z-index: 30;
+}
+
+
+/* thought bubble clouds*/
+.gnome-bubble::before {
+  content: "";
+
+  position: absolute;
+
+  right: 1%;
+  bottom: -10%;
+
+  width: 10%;
+  aspect-ratio: 1 / 1;
+
+  background: #fbe8ba;
+
+  border-radius: 50%;
+
+  box-shadow:
+    1.3vw 1vw 0 -0.15vw #fbe8ba,
+    2.2vw 1.8vw 0 -0.35vw #fbe8ba;
+}
+
+
+/* gnome float animation */
+@keyframes gnomeFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 /* =========================================
    ABOUT POPUP
 ========================================= */
@@ -1539,7 +1644,8 @@ overflow-y: auto;
 
 .resume {
   left: 1%;
-  top: 10.5%;
+  top: 5%;
+  width: 22%;
 }
 
 .about {
@@ -1558,8 +1664,25 @@ overflow-y: auto;
 }
 
 .experience {
-  left: 77%;
-  top: 20%;
+  left: 78%;
+  top: 19%;
+  width: 23%;
+}
+
+/*flying gnome*/
+.flying-gnome {
+  left: 64%;
+  top: 6%;
+  width: 18%;
+}
+
+.gnome-bubble {
+  left: 56%;
+  top:10%;
+
+  max-width: 12%;
+
+  font-size: 14px;
 }
 
 /* MOBILE PROJECT PAGE */

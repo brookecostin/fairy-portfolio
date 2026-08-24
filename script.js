@@ -81,6 +81,22 @@ function createSparkle() {
 }
 
 // =========================================
+// FLYING GNOME
+// =========================================
+
+const flyingGnome =
+  document.getElementById("flyingGnome");
+
+const gnomeBubble =
+  document.getElementById("gnomeBubble");
+
+flyingGnome.addEventListener("click", () => {
+
+  gnomeBubble.classList.toggle("hidden");
+
+});
+
+// =========================================
 // ABOUT HOUSE POPUP
 // =========================================
 
@@ -599,3 +615,4 @@ closeProjectDetail.addEventListener(
 
   }
 );
+
