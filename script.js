@@ -97,6 +97,26 @@ flyingGnome.addEventListener("click", () => {
 });
 
 // =========================================
+// WORKING GNOME - EXPERIENCE HOUSE
+// =========================================
+
+const experienceHouse =
+  document.getElementById("experienceHouse");
+
+const workingGnome =
+  document.getElementById("workingGnome");
+
+
+// Click Experience house → show/hide gnome
+experienceHouse.addEventListener("click", (event) => {
+
+  event.preventDefault();
+
+  workingGnome.classList.toggle("hidden");
+
+});
+
+// =========================================
 // ABOUT HOUSE POPUP
 // =========================================
 
